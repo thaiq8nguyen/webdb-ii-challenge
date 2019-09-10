@@ -1,0 +1,50 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection) or
+# paste cURL into the file and request will be converted to HTTP Request format.
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+### Add a Car
+POST http://localhost:4000/api/cars
+Content-Type: application/json
+
+{
+  "vin": "123456789",
+  "make": "Lexus",
+  "model": "ES350",
+  "mileage": "9001",
+  "transmission_type": "automatic",
+  "title_status": "clean"
+  }
+
+### Get all cars
+GET http://localhost:4000/api/cars/?limit=2
+Accept: application/json
+
+### Get a car
+GET http://localhost:4000/api/cars/2
+Accept: application/json
+
+### Update a car
+PUT http://localhost:4000/api/cars/2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "make": "Lexus",
+  "model": "ES340",
+  "mileage": "9004",
+  "transmission_type": "automatic",
+  "title_status": "clean"
+}
+
+### Delete a car
+DELETE http://localhost:4000/api/cars/2
+Accept: application/json
+
+###
+
+
+
